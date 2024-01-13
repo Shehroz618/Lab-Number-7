@@ -1,0 +1,180 @@
+Question No # 1:
+#include <stdio.h>
+
+int main() {
+    // Declare variables to store the input numbers
+    float num1, num2;
+
+    // Prompt the user to enter the first number
+    printf("Enter the first number: ");
+    
+    // Read the first number from the keyboard
+    scanf("%f", &num1);
+
+    // Prompt the user to enter the second number
+    printf("Enter the second number: ");
+    
+    // Read the second number from the keyboard
+    scanf("%f", &num2);
+
+    // Compute the sum of the two numbers
+    float sum = num1 + num2;
+
+    // Display the result
+    printf("Sum: %.2f\n", sum);
+
+    return 0;
+}
+
+---------------------------------------------------
+
+Question No 2:
+int main() {
+    // Declare variables to store the input numbers
+    int A, B;
+
+    // Prompt the user to enter the first number (A)
+    printf("Enter the value for A: ");
+    
+    // Read the first number from the keyboard
+    scanf("%d", &A);
+
+    // Prompt the user to enter the second number (B)
+    printf("Enter the value for B: ");
+    
+    // Read the second number from the keyboard
+    scanf("%d", &B);
+
+    // Display the values before swapping
+    printf("Before swapping:\n");
+    printf("A: %d\n", A);
+    printf("B: %d\n", B);
+
+    // Swap the values of A and B using a temporary variable
+    int temp = A;
+    A = B;
+    B = temp;
+
+    // Display the values after swapping
+    printf("After swapping:\n");
+    printf("A: %d\n", A);
+    printf("B: %d\n", B);
+
+    return 0;
+}
+
+
+---------------------------------------------------
+Question No 3:
+
+#include <stdio.h>
+
+int main() {
+    // Declare variables to store student information
+    int studentID, visa;
+    float midtermGrade, finalGrade, passingGrade;
+
+    // Prompt the user to enter student information
+    printf("Enter Student ID: ");
+    scanf("%d", &studentID);
+
+    printf("Enter Visa: ");
+    scanf("%d", &visa);
+
+    printf("Enter Midterm Grade: ");
+    scanf("%f", &midtermGrade);
+
+    printf("Enter Final Grade: ");
+    scanf("%f", &finalGrade);
+
+    // Calculate passing grade using the specified weights
+    passingGrade = 0.4 * midtermGrade + 0.6 * finalGrade;
+
+    // Display the student information and passing grade
+    printf("\nStudent Information:\n");
+    printf("Student ID: %d\n", studentID);
+    printf("Visa: %d\n", visa);
+    printf("Midterm Grade: %.2f\n", midtermGrade);
+    printf("Final Grade: %.2f\n", finalGrade);
+    printf("Passing Grade: %.2f\n", passingGrade);
+
+    return 0;
+}
+
+----------------------------
+
+Question No 4:
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Declare variables to store input
+    float radius;
+    int operationType;
+
+    // Prompt the user to enter the radius
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+
+    // Prompt the user to enter the operation type
+    printf("Enter the operation type (1 for perimeter, 2 for area): ");
+    scanf("%d", &operationType);
+
+    // Calculate perimeter and area based on the operation type
+    if (operationType == 1) {
+        // Calculate perimeter (2 * π * radius)
+        float perimeter = 2 * M_PI * radius;
+        printf("Perimeter of the circle: %.2f\n", perimeter);
+    } else if (operationType == 2) {
+        // Calculate area (π * radius^2)
+        float area = M_PI * pow(radius, 2);
+        printf("Area of the circle: %.2f\n", area);
+    } else {
+        // Handle invalid operation type
+        printf("Invalid operation type. Please enter 1 for perimeter or 2 for area.\n");
+    }
+
+    return 0;
+}
+-------------------------------
+Question No 5:
+
+#include <stdio.h>
+
+int main() {
+    // Declare variables
+    int amount, hundreds, fifties, twenties, tens;
+
+    // Prompt the user to enter the amount (multiple of 10)
+    printf("Enter the amount of money (multiple of 10): ");
+    scanf("%d", &amount);
+
+    // Validate that the amount is a multiple of 10
+    if (amount % 10 != 0) {
+        printf("Error: Please enter an amount that is a multiple of 10.\n");
+        return 1; // Exit program with an error code
+    }
+
+    // Calculate the number of each banknote
+    hundreds = amount / 100;
+    amount %= 100;
+
+    fifties = amount / 50;
+    amount %= 50;
+
+    twenties = amount / 20;
+    amount %= 20;
+
+    tens = amount / 10;
+
+    // Display the results
+    printf("\nBanknotes needed:\n");
+    printf("100 TL banknotes: %d\n", hundreds);
+    printf("50 TL banknotes: %d\n", fifties);
+    printf("20 TL banknotes: %d\n", twenties);
+    printf("10 TL banknotes: %d\n", tens);
+
+    return 0;
+}
+
